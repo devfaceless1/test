@@ -201,23 +201,18 @@
     }
   }
 
-  // Функция переключения страниц — глобальная
+  // Глобальная функция переключения страниц
   window.showPage = function(pageId, event) {
     if (event) event.preventDefault();
 
-    // Скрываем все страницы
     document.querySelectorAll(".page").forEach(p => p.classList.remove("active"));
-
-    // Показываем нужную
     const page = document.getElementById(pageId);
     if (page) page.classList.add("active");
 
-    // Обновляем активный пункт футера
     document.querySelectorAll(".footer-nav__item").forEach(i => i.classList.remove("active"));
     const link = document.querySelector(`.footer-nav__item a[onclick*="${pageId}"]`);
     if (link) link.parentElement.classList.add("active");
 
-    // Обновляем URL без перезагрузки
     history.pushState({ page: pageId }, "", `#${pageId}`);
   }
 
@@ -227,8 +222,7 @@
     window.showPage(page);
   });
 
-  // Показываем по умолчанию главную страницу page-ad
-  window.showPage("page-ad");
+  // Никаких изменений по hash при первой загрузке — главная страница уже active
 </script>
 
 
