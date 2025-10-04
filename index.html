@@ -10,8 +10,8 @@
   <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap" rel="stylesheet">
   <style>
     .page { display: none; }
-    .page.active { display: block; }
-    .footer-nav__item.active a { color: var(--accent-color, #0088cc); font-weight: 600; }
+    .page.active { display: flex; }
+
   </style>
 </head>
 <body>
@@ -56,7 +56,7 @@
                 </div>
                 <div class="ad-block__description">
                   <div class="ad-block__desc block-bottom__item">Ishov 5 den bez sush</div>
-                    <a href="https://t.me/miy_bloh" class="ad-link ad-link__mobile block-bottom__item">Subscribe 14.88⭐</a>
+                    <a href="https://t.me/SonataStudio" class="ad-link ad-link__mobile block-bottom__item">Subscribe 14.88⭐</a>
                 </div>
               </div>
             </div>
@@ -72,7 +72,22 @@
                 </div>
                 <div class="ad-block__description">
                   <div class="ad-block__desc block-bottom__item">Official Telegram of Pavel Durov</div>
-                    <a href="https://t.me/durov" class="ad-link ad-link__mobile block-bottom__item">Subscribe 15⭐</a>
+                    <a href="#" class="ad-link ad-link__mobile block-bottom__item">Subscribe 15⭐</a>
+                </div>
+              </div>
+            </div>
+            <!-- block -->
+            <div class="ad-block">
+              <div class="ad-block__head">
+                <video autoplay muted loop playsinline class="ad-block__img" src="images/photo_2025-10-04_22-09-30.mp4"></video>
+              </div>
+              <div class="ad-block__bottom">
+                <div class="ad-block__text block-bottom__item">
+                  <div class="ad-block__title">Sonata Studio</div>
+                </div>
+                <div class="ad-block__description">
+                  <div class="ad-block__desc block-bottom__item">Create your own chat-bot right now</div>
+                    <a href="https://t.me/SonataStudio" class="ad-link ad-link__mobile block-bottom__item">Subscribe 15⭐</a>
                 </div>
               </div>
             </div>
@@ -88,8 +103,27 @@
     <!-- cases -->
     <section id="page-cases" class="page">
       <div class="section-cases">
-        <h2>Your Cases</h2>
-        <p>Here will be your active and completed cases.</p>
+        <div class="section-cases__content">
+          <div class="section-cases__blocks">
+
+            <!-- block -->
+            <a class="case-block" href="#" onclick="showPage('case-durov', event)">
+            
+              <div class="case-block__head">
+                <img class="case-block__img" src="images/durov.jpg" alt="item">
+              </div>
+              <div class="case-block__bottom">
+                <h2 class="case-block__title">Durov's Case</h2>
+              </div>
+            </a>
+      </div>
+    </section>
+
+    <section id="case-durov" class="page">
+      <div class="case-durov">
+      <h1>Hello</h1>
+      
+      <a class="back-button" href="#" onclick="showPage('page-cases', event)">Back</a>
       </div>
     </section>
   </main>
@@ -112,21 +146,6 @@
 <script>
   const tg = window.Telegram.WebApp;
   tg.expand();
-
-  const user = tg.initDataUnsafe?.user;
-  if (user) {
-    const nameEl = document.getElementById("name");
-    const avatarEl = document.getElementById("avatar");
-
-    if (nameEl) nameEl.textContent = user.first_name || "User";
-    if (avatarEl) {
-      if (user.username) {
-        avatarEl.src = `https://t.me/i/userpic/320/${user.username}.jpg`;
-      } else if (user.photo_url) {
-        avatarEl.src = user.photo_url;
-      }
-    }
-  }
 
   // nav
   window.showPage = function(pageId, event) {
@@ -157,4 +176,3 @@
   <script src="telegram.js"></script> 
 </body>
 </html>
-
