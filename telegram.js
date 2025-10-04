@@ -22,8 +22,8 @@
     ].join(';');
     wrapper.innerHTML = `
       <div>
-        <h1 style="margin-bottom:8px;font-size:20px">Этот мини‑апп доступен только через Telegram</h1>
-        <p style="opacity:0.85;margin-bottom:18px">Откройте мини‑апп через Telegram.</p>
+        <h1 style="margin-bottom:8px;font-size:20px">Try to open this in Telegram</h1>
+        <p style="opacity:0.85;margin-bottom:18px">Open this mini-app in Telegram.</p>
       </div>
     `;
     
