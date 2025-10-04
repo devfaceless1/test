@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>GemAd - Earn Telegram Stars!</title>
+  <link rel="stylesheet" href="reset.css">
+  <link rel="stylesheet" href="styles.css">
+  <script src="https://telegram.org/js/telegram-web-app.js"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap" rel="stylesheet">
+  <style>
+    .page { display: none; }
+    .page.active { display: block; }
+    .footer-nav__item.active a { color: var(--accent-color, #0088cc); font-weight: 600; }
+  </style>
+</head>
+<body>
+  <!-- Header -->
+  <header>
+  <div class="header__content">
+    <div class="user-info">
+      <div class="logo info-item">
+        <!-- Аватар пользователя Telegram -->
+        <img class="user-icon" id="avatar" src="" alt="avatar">
+      </div>
+      <div class="user-stat">
+        <!-- Имя пользователя -->
+        <div class="user-name info-item" id="name"></div>
+        <!-- Количество заработанных звезд (можно обновлять через JS) -->
+        <div class="stars-earned info-item" id="stars-earned"></div>
+      </div>
+    </div>
+    <div class="user-balance info-item">
+      <!-- Баланс звезд -->
+      <div class="stars-balance" id="stars-balance"></div>
+    </div>
+  </div>
+</header>
+
+  <!-- Main -->
+  <main>
+    <!-- Page 1 -->
+    <section id="page-ad" class="page active">
+      <div class="section-header">
+        <div class="section-header__content">
+          <div class="section-header__blocks">
+
+            <!-- Пример блока -->
+            <div class="ad-block">
+              <div class="ad-block__head">
+                <img class="ad-block__img" src="images/user-icon.jpg" alt="item">
+              </div>
+              <div class="ad-block__bottom">
+                <div class="ad-block__text block-bottom__item">
+                  <div class="ad-block__title">Shop West</div>
+                  <div class="ad-block__price price">5 ⭐</div>
+                </div>
+                <div class="ad-block__description">
+                  <div class="ad-block__desc block-bottom__item">Telegram channel bla bla bla</div>
+                    <a href="#" class="ad-link ad-link__default block-bottom__item">Subscribe</a>
+                    <a href="#" class="ad-link ad-link__mobile block-bottom__item">Subscribe 15⭐</a>
+                </div>
+              </div>
+            </div>
+
+            <!-- Пример блока -->
+            <div class="ad-block">
+              <div class="ad-block__head">
+                <img class="ad-block__img" src="images/user-icon.jpg" alt="item">
+              </div>
+              <div class="ad-block__bottom">
+                <div class="ad-block__text block-bottom__item">
+                  <div class="ad-block__title">Shop West</div>
+                  <div class="ad-block__price price">5 ⭐</div>
+                </div>
+                <div class="ad-block__description">
+                  <div class="ad-block__desc block-bottom__item">Telegram channel bla bla bla</div>
+                    <a href="#" class="ad-link ad-link__default block-bottom__item">Subscribe</a>
+                    <a href="#" class="ad-link ad-link__mobile block-bottom__item">Subscribe 15⭐</a>
+                </div>
+              </div>
+            </div>
+            <!-- Пример блока -->
+            <div class="ad-block">
+              <div class="ad-block__head">
+                <img class="ad-block__img" src="images/user-icon.jpg" alt="item">
+              </div>
+              <div class="ad-block__bottom">
+                <div class="ad-block__text block-bottom__item">
+                  <div class="ad-block__title">Shop West</div>
+                  <div class="ad-block__price price">5 ⭐</div>
+                </div>
+                <div class="ad-block__description">
+                  <div class="ad-block__desc block-bottom__item">Telegram channel bla bla bla</div>
+                    <a href="#" class="ad-link ad-link__default block-bottom__item">Subscribe</a>
+                    <a href="#" class="ad-link ad-link__mobile block-bottom__item">Subscribe 15⭐</a>
+                </div>
+              </div>
+            </div>
+            <!-- Пример блока -->
+            <div class="ad-block">
+              <div class="ad-block__head">
+                <img class="ad-block__img" src="images/user-icon.jpg" alt="item">
+              </div>
+              <div class="ad-block__bottom">
+                <div class="ad-block__text block-bottom__item">
+                  <div class="ad-block__title">Shop West</div>
+                  <div class="ad-block__price price">5 ⭐</div>
+                </div>
+                <div class="ad-block__description">
+                  <div class="ad-block__desc block-bottom__item">Telegram channel bla bla bla</div>
+                    <a href="#" class="ad-link ad-link__default block-bottom__item">Subscribe</a>
+                    <a href="#" class="ad-link ad-link__mobile block-bottom__item">Subscribe 15⭐</a>
+                </div>
+              </div>
+            </div>
+            <!-- Пример блока -->
+            <div class="ad-block">
+              <div class="ad-block__head">
+                <img class="ad-block__img" src="images/user-icon.jpg" alt="item">
+              </div>
+              <div class="ad-block__bottom">
+                <div class="ad-block__text block-bottom__item">
+                  <div class="ad-block__title">Shop West</div>
+                  <div class="ad-block__price price">5 ⭐</div>
+                </div>
+                <div class="ad-block__description">
+                  <div class="ad-block__desc block-bottom__item">Telegram channel bla bla bla</div>
+                    <a href="#" class="ad-link ad-link__default block-bottom__item">Subscribe</a>
+                    <a href="#" class="ad-link ad-link__mobile block-bottom__item">Subscribe 15⭐</a>
+                </div>
+              </div>
+            </div>
+            <!-- Пример блока -->
+            <div class="ad-block">
+              <div class="ad-block__head">
+                <img class="ad-block__img" src="images/user-icon.jpg" alt="item">
+              </div>
+              <div class="ad-block__bottom">
+                <div class="ad-block__text block-bottom__item">
+                  <div class="ad-block__title">Shop West</div>
+                  <div class="ad-block__price price">5 ⭐</div>
+                </div>
+                <div class="ad-block__description">
+                  <div class="ad-block__desc block-bottom__item">Telegram channel bla bla bla</div>
+                    <a href="#" class="ad-link ad-link__default block-bottom__item">Subscribe</a>
+                    <a href="#" class="ad-link ad-link__mobile block-bottom__item">Subscribe 15⭐</a>
+                </div>
+              </div>
+            </div>
+
+            
+
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Page 2 -->
+    <section id="page-cases" class="page">
+      <div class="section-header">
+        <h2>Your Cases</h2>
+        <p>Here will be your active and completed cases.</p>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <div class="footer">
+      <ul class="footer-nav">
+        <li class="footer-nav__item active">
+  <a href="#" onclick="showPage('page-ad', event)">Ad</a>
+</li>
+<li class="footer-nav__item">
+  <a href="#" onclick="showPage('page-cases', event)">Cases</a>
+</li>
+      </ul>
+    </div>
+  </footer>
+
+  <!-- Telegram + Navigation Script -->
+<script>
+  // Инициализация Telegram и пользовательских данных
+  const tg = window.Telegram.WebApp;
+  tg.expand();
+
+  const user = tg.initDataUnsafe?.user;
+  if (user) {
+    const nameEl = document.getElementById("name");
+    const avatarEl = document.getElementById("avatar");
+
+    if (nameEl) nameEl.textContent = user.first_name || "User";
+    if (avatarEl) {
+      if (user.username) {
+        avatarEl.src = `https://t.me/i/userpic/320/${user.username}.jpg`;
+      } else if (user.photo_url) {
+        avatarEl.src = user.photo_url;
+      }
+    }
+  }
+
+  // Функция переключения страниц — глобальная
+  window.showPage = function(pageId, event) {
+    if (event) event.preventDefault();
+
+    // Скрываем все страницы
+    document.querySelectorAll(".page").forEach(p => p.classList.remove("active"));
+
+    // Показываем нужную
+    const page = document.getElementById(pageId);
+    if (page) page.classList.add("active");
+
+    // Обновляем активный пункт футера
+    document.querySelectorAll(".footer-nav__item").forEach(i => i.classList.remove("active"));
+    const link = document.querySelector(`.footer-nav__item a[onclick*="${pageId}"]`);
+    if (link) link.parentElement.classList.add("active");
+
+    // Обновляем URL без перезагрузки
+    history.pushState({ page: pageId }, "", `#${pageId}`);
+  }
+
+  // Обработка кнопки "назад" браузера
+  window.addEventListener("popstate", e => {
+    const page = e.state?.page || "page-ad";
+    window.showPage(page);
+  });
+
+  // Показываем страницу по hash или первую страницу по умолчанию
+  const initialPage = location.hash.replace("#", "") || "page-ad";
+  window.showPage(initialPage);
+</script>
+
+
+<script src="https://telegram.org/js/telegram-web-app.js"></script>
+  <script src="telegram.js"></script> 
+</body>
+</html>
