@@ -250,7 +250,7 @@ main {
   .viewport{
     width:var(--viewport-w);
     height:var(--viewport-h);
-    background:linear-gradient(180deg,#111,#0e1420);
+    background: #131825;
     border-radius:12px;
     overflow:hidden;
     position:relative;
