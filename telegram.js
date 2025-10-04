@@ -38,7 +38,7 @@
   const mainEl = document.querySelector("main");
   if (mainEl) {
     mainEl.style.paddingTop = headerHeight + "px";
-    mainEl.style.paddingBottom = "60px"; // для футера
+    mainEl.style.paddingBottom = "0px"; // для футера
   }
 
   const user = tg.initDataUnsafe?.user;
